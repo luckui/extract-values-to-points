@@ -1,4 +1,4 @@
-from src.core import sampling
+from src import sampling
 
 
 shp_path = r'test\point.shp'
