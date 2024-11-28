@@ -15,6 +15,8 @@ out_dir = r"dataV2\distance"
 
 
 def getXYbyGpd(gdf: gpd.GeoDataFrame, epsg):
+    if epsg is not None:
+        gdf = gdf.to_crs(epsg=epsg)
     gdf = gdf.to_crs(epsg=epsg)
     x = gdf.geometry.centroid.x
     y = gdf.geometry.centroid.y
